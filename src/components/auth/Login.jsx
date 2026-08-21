@@ -34,6 +34,11 @@ const Login = () => {
         "user", JSON.stringify(response.data.user)
       )
 
+const token = response.data.token 
+
+localStorage.setItem("token", token)
+// console.log(token);
+
       alert(response.data.message);
 
       setEmail("");
